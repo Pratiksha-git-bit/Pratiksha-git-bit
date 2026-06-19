@@ -1,16 +1,38 @@
-## Hi there 👋
+# Hi, I'm Pratiksha 👋
+### Product Manager | Fintech & AI | Hyderabad
 
-<!--
-**Pratiksha-git-bit/Pratiksha-git-bit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I build data-informed products at the intersection of
+AI, fintech, and user experience.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🚀 Portfolio Projects
+
+### 🛡️ FraudShield — AI-Powered Fraud Detection
+> XGBoost + SHAP Explainability + LangChain RAG + Streamlit UI
+
+- 87% recall at threshold 0.7
+- LangChain RAG pipeline with FAISS vectorstore
+- "Riya" — AI fraud analyst persona
+- [View Project →](https://github.com/Pratiksha-git-bit/Fraudshield)
+
+---
+
+### 🛒 ShopEase — Checkout Optimization
+> PRD + MySQL + Flask API + Power BI Dashboard + Figma Wireframes
+
+- Diagnosed 72% cart abandonment rate
+- End-to-end PM artifacts: BRD, PRD, User Stories, SQL schema
+- [View Project →](https://github.com/Pratiksha-git-bit/ShopEase)
+
+---
+
+## 🛠️ Skills
+`Product Management` `SQL` `Python` `Power BI`
+`LangChain` `Machine Learning` `Figma` `Flask`
+
+---
+
+## 📬 Connect
+[LinkedIn](https://linkedin.com/in/pratiksha-lall-146572213)
+
