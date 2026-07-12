@@ -4,6 +4,8 @@
 I build data-informed products at the intersection of
 AI, fintech, and user experience.
 
+🔗 Portfolio: [pratiksha-git-bit.github.io/Pratiksha-git-bit/](https://pratiksha-git-bit.github.io/Pratiksha-git-bit/)
+
 ---
 
 ## 🚀 Portfolio Projects
