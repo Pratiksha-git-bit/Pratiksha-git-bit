@@ -233,8 +233,8 @@
         <div class="metric"><div class="num">284K</div><div class="lbl">Transactions modeled</div></div>
         <div class="metric"><div class="num">≤5%</div><div class="lbl">False positive rate target</div></div>
         <div class="metric"><div class="num">4</div><div class="lbl">Agents in the pipeline</div></div>
-      </div>
-
+        <div class="metric"><div class="num">36</div><div class="lbl">Golden-dataset eval cases</div></div>
+        </div>
       <div class="cm-wrap">
         <div class="cm-cell tp"><div class="cm-title">True Positive</div><div class="cm-note">Fraud caught. What recall optimizes for.</div></div>
         <div class="cm-cell"><div class="cm-title">False Negative</div><div class="cm-note">Fraud missed — recoverable, but costly.</div></div>
@@ -242,7 +242,7 @@
         <div class="cm-cell"><div class="cm-title">True Negative</div><div class="cm-note">Correctly left alone.</div></div>
       </div>
       <div class="cm-caption">// core PM call: optimize precision (≥0.95) as primary gate, recall (≥0.85) as constraint — a blocked legitimate transaction costs more trust than one recoverable miss.</div>
-
+      <div class="cm-caption">// validation: built a 36-case golden-dataset eval harness to test every agent's decision against expected outcomes — caught a silent pipeline bug during evaluation before it could corrupt production results.</div>
       <div class="stack-row">
         <span class="chip">XGBoost</span>
         <span class="chip">SHAP</span>
