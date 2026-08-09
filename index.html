@@ -78,6 +78,7 @@
   .lede{
     margin-top:22px;max-width:600px;color:var(--muted);font-size:17px;
   }
+  .lede strong{color:var(--text);font-weight:600;}
   .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
   .btn{
     font-family:var(--font-mono);font-size:13px;letter-spacing:0.03em;
@@ -124,6 +125,24 @@
   }
   .problem-label{font-family:var(--font-mono);font-size:11px;color:var(--danger);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
   .problem-block p{color:var(--muted);font-size:14.5px;}
+
+  .why-block{
+    border-left:2px solid var(--signal);
+    background:var(--panel-raised);
+    padding:16px 20px;margin-bottom:28px;max-width:680px;border-radius:0 3px 3px 0;
+  }
+  .why-label{font-family:var(--font-mono);font-size:11px;color:var(--signal);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;}
+  .why-block ul{list-style:none;}
+  .why-block li{color:var(--muted);font-size:14.5px;padding-left:16px;position:relative;margin-bottom:10px;line-height:1.6;}
+  .why-block li:last-child{margin-bottom:0;}
+  .why-block li:before{content:"→";position:absolute;left:0;color:var(--signal);font-size:12px;}
+  .why-block strong{color:var(--text);font-weight:600;}
+
+  .impact-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0 8px;}
+  @media(max-width:640px){.impact-row{grid-template-columns:repeat(2,1fr);}}
+  .impact{background:var(--panel-raised);padding:16px;}
+  .impact .num{font-family:var(--font-mono);font-size:20px;color:var(--signal);font-weight:600;}
+  .impact .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-top:4px;line-height:1.4;}
 
   .metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:28px;}
   @media(max-width:640px){.metric-row{grid-template-columns:repeat(2,1fr);}}
@@ -197,8 +216,8 @@
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Product Manager · Fintech &amp; AI</div>
-    <h1>Four years of resource management discipline, now pointed at <span class="accent">building the product.</span></h1>
-    <p class="lede">I'm a Product Manager who spent years running resource management inside large delivery organizations, then taught myself Python, SQL, and applied ML to close the gap between business judgment and technical execution. I build working systems, not just specs — see FraudShield below.</p>
+    <h1>Four years as a consultant inside enterprise delivery orgs, now pointed at <span class="accent">building the product.</span></h1>
+    <p class="lede">I'm a Product Manager currently consulting at Deloitte, where I own requirements and rollout on an internal workforce platform — most recently launching an hours-logging feature to <strong>303 practitioners</strong> that cut time-tracking errors by <strong>80%</strong>, and a Python automation tool that took report prep from <strong>2 hours to under 5 minutes</strong>. Alongside that I taught myself Python, SQL, and applied ML to close the gap between business judgment and technical execution. I build working systems, not just specs — see FraudShield below.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#work">View case studies ↓</a>
       <a class="btn btn-ghost" href="https://www.github.com/pratiksha-git-bit" target="_blank" rel="noopener">GitHub ↗</a>
@@ -225,6 +244,16 @@
       <div class="problem-block">
         <div class="problem-label">Problem</div>
         <p>Fraud ops analysts are overwhelmed by alert volume, most of it false positives, from rule-based systems that flag transactions without explaining why. That forces manual investigation on every alert, slows response time, and drives up operational cost — while a missed fraud event still carries real financial and reputational risk.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-label">Why AI — and not a rule engine</div>
+        <ul>
+          <li><strong>Rules are static; fraud isn't.</strong> A hand-tuned threshold gets reverse-engineered by fraudsters within weeks, and every pattern shift costs another manual re-tune. A model retrains on new data instead.</li>
+          <li><strong>Fraud lives in interactions, not single fields.</strong> XGBoost on 284,807 transactions picks up combinations of amount, velocity, and behavioural signal that nobody would think to write as a standalone rule.</li>
+          <li><strong>Fraud is ~0.17% of the data — accuracy is a useless metric here.</strong> A model gives me a threshold I can dial against a precision/recall curve; a rule gives me a binary with no business lever attached.</li>
+          <li><strong>The cost of AI is the black box, so I paid it back with SHAP.</strong> Rules explain themselves for free; a model doesn't. If an analyst can't defend a flag to a customer or a regulator, the accuracy gain is worthless — so explainability was scoped as a P0, not a nice-to-have.</li>
+          <li><strong>A score isn't a decision.</strong> The LangGraph agents and the RAG layer exist to turn a probability into an actionable, grounded case an analyst can review — with high-risk cases escalated to a human rather than auto-actioned.</li>
+        </ul>
       </div>
       <p class="project-desc">An AI-powered fraud detection system for internal fraud operations analysts. An XGBoost classifier scores transactions in real time; a LangGraph multi-agent layer — Document Verification, Risk Scoring, Compliance, and Case Notes agents — routes the highest-risk cases to a human analyst, with a LangChain/FAISS RAG layer grounding every explanation in transaction metadata so it doesn't hallucinate a reason for the flag.</p>
 
@@ -317,12 +346,19 @@
     <div class="section-head">
       <div>
         <div class="section-num">02 — About</div>
-        <h2>From resourcing operations to product</h2>
+        <h2>From consulting to product</h2>
       </div>
     </div>
     <div class="about-grid">
       <div>
-        <p>I spent roughly three and a half years at TCS in resource management operations, then moved into a Consultant contract role at Deloitte, where the work is resourcing support with UAT testing exposure on an internal workforce management tool.</p>
+        <p>I'm currently a <strong>Consultant at Deloitte</strong>, working on an internal workforce management platform — owning requirements, running UAT across member-firm and GO-level test cycles, and driving the rollout of features to the practice. Before that I spent roughly three and a half years at TCS as an <strong>Assistant System Consultant</strong>, running demand-to-deployment for 100+ concurrent open roles and cutting cycle time by 55%.</p>
+        <p>What that consulting work actually looks like in product terms: I launched a client hours-logging feature to <strong>303 active practitioners</strong>, cutting time-tracking errors by 80%. I built a Python automation tool generating a scheduling report across 10 geos with an "Attention Needed" view for upcoming roll-offs — report prep went from 2 hours to under 5 minutes. And I shipped a Power Query utilization tracker that consolidated 3 separate reports into one live dashboard, cutting manual reporting effort by 85%.</p>
+        <div class="impact-row">
+          <div class="impact"><div class="num">303</div><div class="lbl">Practitioners on feature launch</div></div>
+          <div class="impact"><div class="num">80%</div><div class="lbl">Fewer time-tracking errors</div></div>
+          <div class="impact"><div class="num">2h→5m</div><div class="lbl">Report prep, 10 geos</div></div>
+          <div class="impact"><div class="num">85%</div><div class="lbl">Less manual reporting effort</div></div>
+        </div>
         <p>Alongside full-time work, I've been self-teaching <strong>Python, SQL, machine learning, LangChain, and RAG</strong> since early 2026 — starting from Excel and Power BI as my only technical baseline — with the explicit goal of moving into a Technical APM or Associate PM role at a Series B+ fintech or AI-first startup.</p>
         <p>I hold a <strong>B.Tech in Electronics &amp; Communication Engineering</strong> and an <strong>MBA</strong>, and I'm based in Hyderabad, open to relocating to Bangalore.</p>
       </div>
@@ -332,7 +368,8 @@
         <div class="fact"><div class="k">Open to</div><div class="v">Bangalore relocation</div></div>
         <div class="fact"><div class="k">Target role</div><div class="v">Technical APM / Associate PM</div></div>
         <div class="fact"><div class="k">Target domain</div><div class="v">Fintech, AI-first products</div></div>
-        <div class="fact"><div class="k">Prior background</div><div class="v">Resource management ops, TCS &amp; Deloitte</div></div>
+        <div class="fact"><div class="k">Current</div><div class="v">Consultant, Deloitte</div></div>
+        <div class="fact"><div class="k">Prior</div><div class="v">Assistant System Consultant, TCS</div></div>
       </div>
     </div>
   </div>
@@ -370,8 +407,8 @@
       <div class="skill-col">
         <h3>Operations</h3>
         <ul>
-          <li>Resource management at enterprise scale</li>
-          <li>UAT testing &amp; internal tooling</li>
+          <li>Internal platform feature rollout at enterprise scale</li>
+          <li>UAT cycles, release validation &amp; internal tooling</li>
           <li>Cross-functional stakeholder alignment</li>
           <li>Delivery lead negotiation, influence without authority</li>
         </ul>
