@@ -2,7 +2,7 @@
 ### Product Manager | B2B SaaS & AI | Hyderabad
 
 I build data-informed products at the intersection of
-AI, fintech, and user experience.
+AI, B2B SaaS, and user experience.
 
 🔗 Portfolio: [pratiksha-git-bit.github.io/Pratiksha-git-bit/](https://pratiksha-git-bit.github.io/Pratiksha-git-bit/)
 
