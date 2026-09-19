@@ -1,5 +1,5 @@
 # Hi, I'm Pratiksha 👋
-### Product Manager | Fintech & AI | Hyderabad
+### Product Manager | B2B SaaS & AI | Hyderabad
 
 I build data-informed products at the intersection of
 AI, fintech, and user experience.
@@ -13,7 +13,7 @@ AI, fintech, and user experience.
 ### 🛡️ FraudShield — AI-Powered Fraud Detection
 > XGBoost + SHAP Explainability + LangChain RAG + Streamlit UI
 
-- 87% recall at threshold 0.7
+- 89% recall at threshold 0.7
 - LangChain RAG pipeline with FAISS vectorstore
 - "Riya" — AI fraud analyst persona
 - [View Project →](https://github.com/Pratiksha-git-bit/Fraudshield)
